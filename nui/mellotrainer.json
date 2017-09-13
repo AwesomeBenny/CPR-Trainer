@@ -6561,13 +6561,13 @@
         }
       },
       {
-        "menuName": "Land Rover RSB",
+        "menuName": "Land Rover - RSB",
         "data": {
           "action": "RSB_LRDEF"
         }
       },
       {
-        "menuName": "Skoda Fabia - Marked",
+        "menuName": "Skoda Octavia - Marked",
         "data": {
           "action": "POLICE"
         }
