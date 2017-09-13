@@ -6537,15 +6537,123 @@
     ],
     "Emergency": [
       {
-        "menuName": "Albany Police Roadcruiser (Snow)",
+        "menuName": "VW Passat - VMER",
         "data": {
-          "action": "POLICEOLD2"
+          "action": "AMBULANCEI"
         }
       },
       {
-        "menuName": "Ambulance",
+        "menuName": "Ambulancia - Mercedes Sprinter",
         "data": {
           "action": "AMBULANCE"
+        }
+      },
+      {
+        "menuName": "BMW GS1200 - INEM",
+        "data": {
+          "action": "EMS_GS1200"
+        }
+      },
+      {
+        "menuName": "Firetruck",
+        "data": {
+          "action": "FIRETRUK"
+        }
+      },
+      {
+        "menuName": "Land Rover RSB",
+        "data": {
+          "action": "RSB_LRDEFF"
+        }
+      },
+      {
+        "menuName": "Skoda Fabia - Marked",
+        "data": {
+          "action": "POLICE"
+        }
+      },
+      {
+        "menuName": "BMW 320d - Marked",
+        "data": {
+          "action": "POLICE3"
+        }
+      },
+      {
+        "menuName": "Land Rover Defender - Marked",
+        "data": {
+          "action": "SHERIFF2"
+        }
+      },
+      {
+        "menuName": "Ford Ranger - Marked",
+        "data": {
+          "action": "PRANGER"
+        }
+      },
+      {
+        "menuName": "Subaru WRX - BT Marked",
+        "data": {
+          "action": "POLICE2"
+        }
+      },
+      {
+        "menuName": "Subaru WRX - BT Unmarked",
+        "data": {
+          "action": "GNR_SSTI"
+        }
+      },
+      {
+        "menuName": "VW Scirocco - BT Unmarked",
+        "data": {
+          "action": "SHERIFFSCI"
+        }
+      },
+      {
+        "menuName": "Audi R8 - BT Marked",
+        "data": {
+          "action": "SHERIFF"
+        }
+      },
+      {
+        "menuName": "BMW Mota - Marked",
+        "data": {
+          "action": "POLICEB"
+        }
+      }
+      {
+        "menuName": "Ford Focus RS - Unmarked",
+        "data": {
+          "action": "POLICE4"
+        }
+      },
+      {
+        "menuName": "Lenco Bearcat - UEP",
+        "data": {
+          "action": "RIOT"
+        }
+      },
+      {
+        "menuName": "Mercedes Sprinter - UEP",
+        "data": {
+          "action": "POLICET"
+        }
+      },
+      {
+        "menuName": "Mercedes Sprinter - Celular",
+        "data": {
+          "action": "PBUS"
+        }
+      },
+      {
+        "menuName": "Mercedes E63 - Unmarked",
+        "data": {
+          "action": "FBI"
+        }
+      },
+      {
+        "menuName": "BMW X5 - Unmarked",
+        "data": {
+          "action": "FBI2"
         }
       },
       {
@@ -6561,21 +6669,9 @@
         }
       },
       {
-        "menuName": "Bravado Buffalo (FIB)",
-        "data": {
-          "action": "FBI"
-        }
-      },
-      {
         "menuName": "Bravado Half-track",
         "data": {
           "action": "HALFTRACK"
-        }
-      },
-      {
-        "menuName": "Brute Police Riot Van",
-        "data": {
-          "action": "RIOT"
         }
       },
       {
@@ -6585,99 +6681,9 @@
         }
       },
       {
-        "menuName": "Declasse Granger (FIB)",
-        "data": {
-          "action": "FBI2"
-        }
-      },
-      {
-        "menuName": "Declasse Lifeguard",
+        "menuName": "VW Aerton - ISN",
         "data": {
           "action": "LGUARD"
-        }
-      },
-      {
-        "menuName": "Declasse Park Ranger",
-        "data": {
-          "action": "PRANGER"
-        }
-      },
-      {
-        "menuName": "Declasse Police Rancher (Snow)",
-        "data": {
-          "action": "POLICEOLD1"
-        }
-      },
-      {
-        "menuName": "Declasse Police Transporter",
-        "data": {
-          "action": "POLICET"
-        }
-      },
-      {
-        "menuName": "Declasse Sheriff SUV",
-        "data": {
-          "action": "SHERIFF2"
-        }
-      },
-      {
-        "menuName": "Firetruck",
-        "data": {
-          "action": "FIRETRUK"
-        }
-      },
-      {
-        "menuName": "HVY APC",
-        "data": {
-          "action": "APC"
-        }
-      },
-      {
-        "menuName": "Prison Bus",
-        "data": {
-          "action": "PBUS"
-        }
-      },
-      {
-        "menuName": "Rhino Tank",
-        "data": {
-          "action": "RHINO"
-        }
-      },
-      {
-        "menuName": "Vapid Police Buffalo",
-        "data": {
-          "action": "POLICE2"
-        }
-      },
-      {
-        "menuName": "Vapid Police Cruiser",
-        "data": {
-          "action": "POLICE"
-        }
-      },
-      {
-        "menuName": "Vapid Police Interceptor",
-        "data": {
-          "action": "POLICE3"
-        }
-      },
-      {
-        "menuName": "Vapid Sheriff Cruiser",
-        "data": {
-          "action": "SHERIFF"
-        }
-      },
-      {
-        "menuName": "Vapid Unmarked Police Cruiser",
-        "data": {
-          "action": "POLICE4"
-        }
-      },
-      {
-        "menuName": "Western Police Bike",
-        "data": {
-          "action": "POLICEB"
         }
       }
     ],

@@ -84,14 +84,14 @@ local admins = {
 
 
 
-local pvpEnabled = true
+--local pvpEnabled = true
 --local maxPlayers = 32
 
 Config = {}
 Config.settings = {
 	
 	--maxPlayers = maxPlayers,
-	pvpEnabled = pvpEnabled,
+	--pvpEnabled = pvpEnabled,
 	adminOnlyTrainer = adminOnlyTrainer,
 	admins = admins,
 	localSaving = localSaving, 

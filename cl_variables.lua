@@ -74,7 +74,7 @@ featureThermalVision = false;
 featurePlayerInvincible = false;
 featureKeepClean = false;
 featureKeepWet = false;
-featurePlayerNeverWanted = false;
+featurePlayerNeverWanted = true;
 featurePlayerIgnoredByPolice = false;
 featurePlayerIgnoredByAll = false;
 featurePlayerNoNoise = false;
@@ -109,13 +109,13 @@ featureShowVoiceChatSpeaker = true;
 featureVoiceChat = true;
 -- One of the below must be true
 featureVPTooClose = false;
-featureVPVeryClose = false;
+featureVPVeryClose = true;
 featureVPClose = false;
 featureVPNearby = false;
 featureVPDistant = false;
 featureVPFar = false;
 featureVPVeryFar = false;
-featureVPAllPlayers = true;
+featureVPAllPlayers = false;
 
 
 
