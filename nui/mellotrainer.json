@@ -32,50 +32,10 @@
         "submenu": []
       },
       {
-        "menuName": "Grenade",
-        "weaponName": "WEAPON_GRENADE",
-        "data": {
-          "sub": 0
-        },
-        "ammo": true,
-        "weapon": true,
-        "submenu": []
-      },
-      {
         "menuName": "Jerry Can",
         "weaponName": "WEAPON_PETROLCAN",
         "data": {
           "sub": 7
-        },
-        "ammo": true,
-        "weapon": true,
-        "submenu": []
-      },
-      {
-        "menuName": "Molotov",
-        "weaponName": "WEAPON_MOLOTOV",
-        "data": {
-          "sub": 5
-        },
-        "ammo": true,
-        "weapon": true,
-        "submenu": []
-      },
-      {
-        "menuName": "Pipebomb",
-        "weaponName": "WEAPON_PIPEBOMB",
-        "data": {
-          "sub": 11
-        },
-        "ammo": true,
-        "weapon": true,
-        "submenu": []
-      },
-      {
-        "menuName": "Proximity Mine",
-        "weaponName": "WEAPON_PROXMINE",
-        "data": {
-          "sub": 2
         },
         "ammo": true,
         "weapon": true,
@@ -102,148 +62,8 @@
         "submenu": []
       },
       {
-        "menuName": "Sticky Bomb",
-        "weaponName": "WEAPON_STICKYBOMB",
-        "data": {
-          "sub": 1
-        },
-        "ammo": true,
-        "weapon": true,
-        "submenu": []
-      },
-      {
         "menuName": "Tear Gas",
         "weaponName": "WEAPON_BZGAS",
-        "data": {
-          "sub": 3
-        },
-        "ammo": true,
-        "weapon": true,
-        "submenu": []
-      }
-    ],
-    "Heavy": [
-      {
-        "menuName": "Compact Grenade Launcher",
-        "weaponName": "WEAPON_COMPACTLAUNCHER",
-        "data": {
-          "sub": 8
-        },
-        "ammo": true,
-        "weapon": true,
-        "submenu": []
-      },
-      {
-        "menuName": "Firework Launcher",
-        "weaponName": "WEAPON_FIREWORK",
-        "data": {
-          "sub": 5
-        },
-        "ammo": true,
-        "weapon": true,
-        "submenu": []
-      },
-      {
-        "menuName": "Grenade Launcher",
-        "weaponName": "WEAPON_GRENADELAUNCHER",
-        "data": {
-          "sub": 0
-        },
-        "ammo": true,
-        "weapon": true,
-        "submenu": [
-          {
-            "menuName": "Scope",
-            "data": {
-              "action": "COMPONENT_AT_SCOPE_SMALL"
-            }
-          },
-          {
-            "menuName": "Flashlight",
-            "data": {
-              "action": "COMPONENT_AT_AR_FLSH"
-            }
-          },
-          {
-            "menuName": "Grip",
-            "data": {
-              "action": "COMPONENT_AT_AR_AFGRIP"
-            }
-          }
-        ]
-      },
-      {
-        "menuName": "Grenade Launcher (Smoke)",
-        "weaponName": "WEAPON_GRENADELAUNCHER_SMOKE",
-        "data": {
-          "sub": 1
-        },
-        "ammo": true,
-        "weapon": true,
-        "submenu": [
-          {
-            "menuName": "Scope",
-            "data": {
-              "action": "COMPONENT_AT_SCOPE_SMALL"
-            }
-          },
-          {
-            "menuName": "Flashlight",
-            "data": {
-              "action": "COMPONENT_AT_AR_FLSH"
-            }
-          },
-          {
-            "menuName": "Grip",
-            "data": {
-              "action": "COMPONENT_AT_AR_AFGRIP"
-            }
-          }
-        ]
-      },
-      {
-        "menuName": "Homing Launcher",
-        "weaponName": "WEAPON_HOMINGLAUNCHER",
-        "data": {
-          "sub": 7
-        },
-        "ammo": true,
-        "weapon": true,
-        "submenu": []
-      },
-      {
-        "menuName": "Minigun",
-        "weaponName": "WEAPON_MINIGUN",
-        "data": {
-          "sub": 4
-        },
-        "ammo": true,
-        "weapon": true,
-        "submenu": []
-      },
-      {
-        "menuName": "Railgun",
-        "weaponName": "WEAPON_RAILGUN",
-        "data": {
-          "sub": 6
-        },
-        "ammo": true,
-        "weapon": true,
-        "submenu": []
-      },
-      {
-        "menuName": "RPG",
-        "weaponName": "WEAPON_RPG",
-        "data": {
-          "sub": 2
-        },
-        "ammo": true,
-        "weapon": true,
-        "submenu": []
-      },
-      {
-        "menuName": "Stinger",
-        "weaponName": "WEAPON_STINGER",
         "data": {
           "sub": 3
         },
@@ -579,7 +399,7 @@
         ]
       },
       {
-        "menuName": "Assault Rifle",
+        "menuName": "AK-47",
         "weaponName": "WEAPON_ASSAULTRIFLE",
         "data": {
           "sub": 0
@@ -661,7 +481,7 @@
         ]
       },
       {
-        "menuName": "Carbine Rifle",
+        "menuName": "Carbine Rifle - M4",
         "weaponName": "WEAPON_CARBINERIFLE",
         "data": {
           "sub": 1
@@ -9881,7 +9701,7 @@
         }
       },
       {
-        "menuName": "Chemsec",
+        "menuName": "Chemsec - Tactic Police",
         "data": {
           "action": "s_m_m_chemsec_01"
         }
@@ -9977,7 +9797,7 @@
         }
       },
       {
-        "menuName": "Ciasec",
+        "menuName": "CIASEC - IC 1",
         "data": {
           "action": "s_m_m_ciasec_01"
         }
@@ -10067,7 +9887,7 @@
         }
       },
       {
-        "menuName": "Cop",
+        "menuName": "Cop Male",
         "data": {
           "action": "s_m_y_cop_01"
         }
@@ -10487,7 +10307,7 @@
         }
       },
       {
-        "menuName": "Fibsec",
+        "menuName": "Fibsec - IC TACT",
         "data": {
           "action": "mp_m_fibsec_01"
         }
@@ -12665,7 +12485,7 @@
         }
       },
       {
-        "menuName": "Swat",
+        "menuName": "SWAT",
         "data": {
           "action": "s_m_y_swat_01"
         }
