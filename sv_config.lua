@@ -63,8 +63,8 @@ local adminOnlyNoclip = false
 https://forum.fivem.net/t/how-to-steam-hex-value-pictures/41071
 -------------------------------------------------------------]]
 local admins = {
-	"steam:110000106e1eac6",   -- Add all steam hexs heres.
-	"steam:110000103920a31",   -- MUST FOLLOW EXAMPLE FORMAT
+	"steam:11000010988531e",   -- Admin Benny
+	"steam:110000114905a96",   -- Admin JPCPT
 	"ip:0.0.0.0",              -- IP possible but not recommended
 }
 
@@ -84,14 +84,14 @@ local admins = {
 
 
 
---local pvpEnabled = true
+local pvpEnabled = true
 --local maxPlayers = 32
 
 Config = {}
 Config.settings = {
-	--pvpEnabled = pvpEnabled,
+	
 	--maxPlayers = maxPlayers,
-
+	pvpEnabled = pvpEnabled,
 	adminOnlyTrainer = adminOnlyTrainer,
 	admins = admins,
 	localSaving = localSaving, 
