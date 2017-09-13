@@ -696,7 +696,7 @@ function showPage(page) {
     
     // Update the page indicator
     if (content.maxpages > 0) {
-        $("#pageindicator").text("Page " + (currentpage + 1) + " / " + (content.maxpages + 1));
+        $("#pageindicator").text("Pag. " + (currentpage + 1) + " / " + (content.maxpages + 1));
     } else {
         $("#pageindicator").text("");
     }

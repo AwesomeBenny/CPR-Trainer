@@ -43,7 +43,7 @@ maxPlayers = 32;
 --General Settings
 featurePlayerBlips = false;
 featurePlayerBlipNames = true;
-featurePlayerHeadDisplay = false;
+featurePlayerHeadDisplay = true;
 -- The above will sync by once the blip system rewrite happens
 featurePlayerNotifications = true;
 featureDeathNotifications = true;
@@ -56,7 +56,7 @@ featureAreaStreetNames = false;
 
 --Vehicle Options
 featureCloseInstantly = false;
-featureSpeedometer = false;
+featureSpeedometer = true;
 featureSpawnInsideCar = true;
 featureSpawnCarInFront = true 
 featureDeleteLastVehicle = true;
