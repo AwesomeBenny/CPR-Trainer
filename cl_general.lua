@@ -120,9 +120,9 @@ function syncSettings()
 	elseif(featureVPVeryFar)then
 		distance = 8000
 	end
-
-	NetworkSetTalkerProximity(distance)     					  -- Voice Proximity
+	
 	NetworkSetVoiceActive(featureVoiceChat) 					  -- Voice Toggle
+	NetworkSetTalkerProximity(distance)							-- Voice Proximity
 
 	if(featurePlayerRadio)then
 		SetMobileRadioEnabledDuringGameplay(featurePlayerRadio)   -- Player Radio

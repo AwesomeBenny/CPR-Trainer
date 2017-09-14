@@ -30,19 +30,19 @@ function updateVoiceDistanceVariables(distance)
 	if(distance == 0)then
 		featureVPAllPlayers = true;
 	elseif(distance == 5)then
-		featureVPTooClose = true
+		featureVPTooClose = true;
 	elseif(distance == 25)then
-		featureVPVeryClose = true
+		featureVPVeryClose = true;
 	elseif(distance == 75)then
-		featureVPClose = true
+		featureVPClose = true;
 	elseif(distance == 200)then
-		featureVPNearby = true
+		featureVPNearby = true;
 	elseif(distance == 500)then
-		featureVPDistant = true
+		featureVPDistant = true;
 	elseif(distance == 2500)then
-		featureVPFar = true
+		featureVPFar = true;
 	elseif(distance == 8000)then
-		featureVPVeryFar = true
+		featureVPVeryFar = true;
 	end
 end
 
