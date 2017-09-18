@@ -123,7 +123,22 @@ function syncSettings()
 	
 	NetworkSetVoiceActive(featureVoiceChat) 					  -- Voice Toggle
 	NetworkSetTalkerProximity(distance)							-- Voice Proximity
-
+	
+	-- Voice Channel
+ 	if(featureChannelDefault)then
+ 		NetworkClearVoiceChannel()
+ 	elseif(featureChannel1)then
+ 		NetworkSetVoiceChannel(1)
+ 	elseif(featureChannel2)then
+ 		NetworkSetVoiceChannel(2)
+ 	elseif(featureChannel3)then
+ 		NetworkSetVoiceChannel(3)
+ 	elseif(featureChannel4)then
+ 		NetworkSetVoiceChannel(4)
+ 	elseif(featureChannel5)then
+ 		NetworkSetVoiceChannel(5)
+ 	end
+	
 	if(featurePlayerRadio)then
 		SetMobileRadioEnabledDuringGameplay(featurePlayerRadio)   -- Player Radio
 		SetUserRadioControlEnabled(true)    
