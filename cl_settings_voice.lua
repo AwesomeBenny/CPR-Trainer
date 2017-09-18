@@ -45,7 +45,20 @@ function updateVoiceDistanceVariables(distance)
 		featureVPVeryFar = true;
 	end
 end
-
+-- Update voice channel variables
+ function updateVoiceChannelVariables(channel)
+ 	featureChannelDefault = false;
+ 	featureChannel1 = false;
+ 	featureChannel2 = false;
+ 	featureChannel3 = false;
+ 	featureChannel4 = false;
+ 	featureChannel5 = false;	
+ 	if(channel == 0)then
+ 		featureChannelDefault = true
+ 	else
+ 		_G["featureChannel"..tostring(channel)] = true
+ 	end
+ end
 
 
 RegisterNUICallback("voiceopts", function(data, cb)
@@ -71,6 +84,7 @@ RegisterNUICallback("voiceopts", function(data, cb)
 			NetworkSetVoiceChannel(tonumber(request))
 			drawNotification("Now In Voice Channel: "..request)
 		end
+		updateVoiceChannelVariables(request)
 	elseif(action=="distance")then
 		local distance = tonumber(request) + 0.00
 
