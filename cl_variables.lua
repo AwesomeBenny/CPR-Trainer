@@ -109,13 +109,13 @@ featureShowVoiceChatSpeaker = true;
 featureVoiceChat = true;
 -- One of the below must be true
 featureVPTooClose = false;
-featureVPVeryClose = false;
+featureVPVeryClose = true;
 featureVPClose = false;
 featureVPNearby = false;
 featureVPDistant = false;
 featureVPFar = false;
 featureVPVeryFar = false;
-featureVPAllPlayers = true;
+featureVPAllPlayers = false;
 -- One of the below must be true.
 -- If multiple are true only the first one will apply.
  featureChannelDefault = true;
