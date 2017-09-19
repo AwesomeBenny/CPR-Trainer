@@ -115,7 +115,7 @@ featureVPNearby = false;
 featureVPDistant = false;
 featureVPFar = false;
 featureVPVeryFar = false;
-featureVPAllPlayers = false;
+featureVPAllPlayers = true;
 -- One of the below must be true.
 -- If multiple are true only the first one will apply.
  featureChannelDefault = true;
