@@ -153,6 +153,10 @@ end)
 
 local allWeapons = {"WEAPON_KNIFE","WEAPON_KNUCKLE","WEAPON_NIGHTSTICK","WEAPON_HAMMER","WEAPON_BAT","WEAPON_GOLFCLUB","WEAPON_CROWBAR","WEAPON_BOTTLE","WEAPON_DAGGER","WEAPON_HATCHET","WEAPON_MACHETE","WEAPON_FLASHLIGHT","WEAPON_SWITCHBLADE","WEAPON_PISTOL","WEAPON_COMBATPISTOL","WEAPON_APPISTOL","WEAPON_PISTOL50","WEAPON_SNSPISTOL","WEAPON_HEAVYPISTOL","WEAPON_VINTAGEPISTOL","WEAPON_STUNGUN","WEAPON_FLAREGUN","WEAPON_MARKSMANPISTOL","WEAPON_REVOLVER","WEAPON_MICROSMG","WEAPON_SMG","WEAPON_ASSAULTSMG","WEAPON_MG","WEAPON_COMBATMG","WEAPON_COMBATPDW","WEAPON_GUSENBERG","WEAPON_MACHINEPISTOL","WEAPON_ASSAULTRIFLE","WEAPON_CARBINERIFLE","WEAPON_ADVANCEDRIFLE","WEAPON_SPECIALCARBINE","WEAPON_BULLPUPRIFLE","WEAPON_COMPACTRIFLE","WEAPON_PUMPSHOTGUN","WEAPON_SAWNOFFSHOTGUN","WEAPON_BULLPUPSHOTGUN","WEAPON_ASSAULTSHOTGUN","WEAPON_MUSKET","WEAPON_HEAVYSHOTGUN","WEAPON_DBSHOTGUN","WEAPON_SNIPERRIFLE","WEAPON_HEAVYSNIPER","WEAPON_BZGAS","WEAPON_SMOKEGRENADE","WEAPON_FIREEXTINGUISHER","WEAPON_PETROLCAN","WEAPON_SNOWBALL","WEAPON_FLARE","WEAPON_BALL"}
 
+local coploadout = {"WEAPON_FLASHLIGHT","WEAPON_NIGHTSTICK","WEAPON_COMBATPISTOL","WEAPON_STUNGUN","WEAPON_PUMPSHOTGUN"}
+local suploadout = {"WEAPON_FLASHLIGHT","WEAPON_NIGHTSTICK","WEAPON_COMBATPISTOL","WEAPON_STUNGUN","WEAPON_PUMPSHOTGUN","WEAPON_CARBINERIFLE"}
+local emsloadout = {"WEAPON_FLASHLIGHT","WEAPON_FIREEXTINGUISHER","WEAPON_CROWBAR"}
+
 
 -- Toggle Infinite ammo for all weapons.
 function toggleInfiniteAmmo(toggle)
@@ -166,6 +170,17 @@ end
 -- Add All Weapons
 function addAllWeapons()
 	for i,v in ipairs(allWeapons) do
+		forceHasWeapon(v)
+	end	
+end
+-- Loadouts
+function addCopWeapons()
+	for i,v in ipairs(coploadout) do
+		forceHasWeapon(v)
+	end	
+end
+function addEMSWeapons()
+	for i,v in ipairs(emsloadout) do
 		forceHasWeapon(v)
 	end	
 end
@@ -195,17 +210,20 @@ RegisterNUICallback("weaponoptions", function(data)
 	if(action == "infinitechutes")then
 		featurePlayerInfiniteParachutes = data.newstate
 		drawNotification("Infinite Parachutes: "..text)
-
 	elseif(action == "noreload")then
 		featurePlayerNoReload = data.newstate
 		SetPedInfiniteAmmoClip(playerPed, featurePlayerNoReload)
 		drawNotification("Infinite Clip: "..text)
-
 	elseif(action == "infiniteammo")then
 		featurePlayerInfiniteAmmo = data.newstate
 		toggleInfiniteAmmo(featurePlayerInfiniteAmmo)
 		drawNotification("Infinite Ammo: "..text)
-
+	elseif(action == "coploadout")then
+		addCopWeapons()
+		drawNotification("Cop Loadout Added")
+	elseif(action == "emsloadout")then
+		addEMSWeapons()
+		drawNotification("EMS Loadout Added")
 	elseif(action == "addall")then
 		addAllWeapons()
 		drawNotification("Weapons Added")
