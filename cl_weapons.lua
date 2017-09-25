@@ -157,7 +157,6 @@ local coploadout = {"WEAPON_FLASHLIGHT","WEAPON_NIGHTSTICK","WEAPON_COMBATPISTOL
 local suploadout = {"WEAPON_FLASHLIGHT","WEAPON_NIGHTSTICK","WEAPON_COMBATPISTOL","WEAPON_STUNGUN","WEAPON_PUMPSHOTGUN","WEAPON_CARBINERIFLE"}
 local emsloadout = {"WEAPON_FLASHLIGHT","WEAPON_FIREEXTINGUISHER","WEAPON_CROWBAR"}
 
-
 -- Toggle Infinite ammo for all weapons.
 function toggleInfiniteAmmo(toggle)
 	for i,v in ipairs(allWeapons) do
@@ -165,7 +164,6 @@ function toggleInfiniteAmmo(toggle)
 		SetPedInfiniteAmmo(playerPed, toggle, weapon)
 	end	
 end
-
 
 -- Add All Weapons
 function addAllWeapons()
@@ -190,7 +188,6 @@ function addEMSWeapons()
 	end	
 end
 
-
 -- Remove All Weapons
 function removeAllWeapons()
 	for i,v in ipairs(allWeapons) do
@@ -198,7 +195,6 @@ function removeAllWeapons()
 		RemoveWeaponFromPed(playerPed, weapon)
 	end	
 end
-
 
 RegisterNUICallback("weaponoptions", function(data)
 	-- Update the current playerPed. Used inside functions.
@@ -210,7 +206,6 @@ RegisterNUICallback("weaponoptions", function(data)
 	if(data.newstate) then
 		text = "~g~ON"
 	end
-
 
 	if(action == "infinitechutes")then
 		featurePlayerInfiniteParachutes = data.newstate
@@ -246,7 +241,17 @@ RegisterNUICallback("weaponoptions", function(data)
 	end
 end)
 
---Checking if the player is an admin
+-- Checking Admin Status:
+RegisterNetEvent("mellotrainer:adminstatus")
+AddEventHandler("mellotrainer:adminstatus", function(status)
+	if(status)then
+		SendNUIMessage({adminaccess = true})
+	else
+		drawNotification("~r~You are not an admin!")
+	end		
+end)
+
+-- Checking if the player is an admin:
 RegisterNUICallback("requireadmin", function(data, cb)
 	TriggerServerEvent("mellotrainer:isAdmin")
 end)

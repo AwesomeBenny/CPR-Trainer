@@ -28,8 +28,6 @@
 --  
 maxPlayers = 32;
 
-
-
 --[[
   ______         _                   __      __        _       _     _           
  |  ____|       | |                  \ \    / /       (_)     | |   | |          
@@ -53,7 +51,6 @@ featureBigHud = false;
 featureMapBlips = true;
 featureAreaStreetNames = false;
 
-
 --Vehicle Options
 featureCloseInstantly = false;
 featureSpeedometer = true;
@@ -66,7 +63,6 @@ featureNoHelmet = false;
 featureVehCosDamage = false;
 featureVehMechDamage = false;
 featureVehInvincible = false;
-
 
 --Player Toggles
 featureNightVision = false;
@@ -89,13 +85,9 @@ featurePlayerInfiniteParachutes = false;
 featurePlayerInfiniteAmmo = false;
 featurePlayerNoReload = false;
 
-
-
-
 --Radio
 featurePlayerRadio = false;
 featureRadioAlwaysOff = false;
-
 
 --Weather
 -- TODO: The following variables are better to sync server-sided.
@@ -103,10 +95,10 @@ featureBlackout = false;
 featureWeatherWind = false;
 featureWeatherFreeze = false;
 
-
 -- Voice
 featureShowVoiceChatSpeaker = true;
 featureVoiceChat = true;
+
 -- One of the below must be true
 featureVPTooClose = false;
 featureVPVeryClose = true;
@@ -115,7 +107,8 @@ featureVPNearby = false;
 featureVPDistant = false;
 featureVPFar = false;
 featureVPVeryFar = false;
-featureVPAllPlayers = true;
+featureVPAllPlayers = false;
+
 -- One of the below must be true.
 -- If multiple are true only the first one will apply.
  featureChannelDefault = true;
@@ -124,7 +117,6 @@ featureVPAllPlayers = true;
  featureChannel3 = false;
  featureChannel4 = false;
  featureChannel5 = false;
-
 
 
 --[[---------------------------------------------
@@ -137,7 +129,6 @@ featureVPAllPlayers = true;
 Users = {}
 playerWasDisconnected = true;
 
-
 -- Vehicle
 featureNoFallOffUpdated = true;
 featureNoDragOutUpdated = true;
@@ -148,6 +139,7 @@ featureNeonRear = nil;
 featureTorqueMultiplier = 1;
 featurePowerMultiplier = 1;
 featureLowerForce = 0;
+
 -- Design choice to make these not sync
 featureTurboMode = false;
 featureCustomTires = false;
@@ -167,11 +159,9 @@ featurePlayerFastRunUpdated = true;
 featurePlayerInvisibleUpdated = true;
 featurePlayerDrunkUpdated = true;
 
-
 -- Online Player
 featureSpectate = false;
 featureDrawRoute = false;
-
 
 --    __  __               ____  _ _           
 --   |  \/  |             |  _ \| (_)          
@@ -322,13 +312,9 @@ darts = nil;
 playboy = nil;
 fib = nil;
 
-
-
-
 --[[---------------------------------------------
 	* Unsued Variables
 -----------------------------------------------]]
-
 
 --isVoiceChatRunning = true;
 
@@ -343,14 +329,12 @@ fib = nil;
 --ptexture = {};
 --pallet = {};
 
-
 --featureChannelDefault = false;
 --featureChannel1 = false;
 --featureChannel2 = false;
 --featureChannel3 = false;
 --featureChannel4 = false;
 --featureChannel5 = false;
-
 
 --featureVC1 = false;
 --featureVC2 = false;
@@ -372,7 +356,6 @@ fib = nil;
 --featureHC8 = false;
 --featureHC9 = false;
 --featureHC10 = false;
-
 
 --featurePlayerBlipCone = false;
 --featureShowDeathCutscene = false;
