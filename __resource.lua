@@ -35,4 +35,5 @@ client_scripts {
 server_script 'sv_config.lua'       -- MelloTrainer config file
 server_script 'sv_main.lua'         -- Main serversided file 
 server_script 'sv_data_saving.lua'  -- Data saving system 
+server_script '@mysql-async/lib/MySQL.lua' -- Mysql Sync
 server_script 'sv_admin.lua'        -- Handles Cross-Player Admin Commands

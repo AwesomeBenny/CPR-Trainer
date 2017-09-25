@@ -120,25 +120,25 @@ function syncSettings()
 	elseif(featureVPVeryFar)then
 		distance = 8000.0
 	end
-	
+
+	NetworkSetTalkerProximity(distance)     					  -- Voice Proximity
 	NetworkSetVoiceActive(featureVoiceChat) 					  -- Voice Toggle
-	NetworkSetTalkerProximity(distance)							-- Voice Proximity
-	
+
 	-- Voice Channel
- 	if(featureChannelDefault)then
- 		NetworkClearVoiceChannel()
- 	elseif(featureChannel1)then
- 		NetworkSetVoiceChannel(1)
- 	elseif(featureChannel2)then
- 		NetworkSetVoiceChannel(2)
- 	elseif(featureChannel3)then
- 		NetworkSetVoiceChannel(3)
- 	elseif(featureChannel4)then
- 		NetworkSetVoiceChannel(4)
- 	elseif(featureChannel5)then
- 		NetworkSetVoiceChannel(5)
- 	end
-	
+	if(featureChannelDefault)then
+		NetworkClearVoiceChannel()
+	elseif(featureChannel1)then
+		NetworkSetVoiceChannel(1)
+	elseif(featureChannel2)then
+		NetworkSetVoiceChannel(2)
+	elseif(featureChannel3)then
+		NetworkSetVoiceChannel(3)
+	elseif(featureChannel4)then
+		NetworkSetVoiceChannel(4)
+	elseif(featureChannel5)then
+		NetworkSetVoiceChannel(5)
+	end
+
 	if(featurePlayerRadio)then
 		SetMobileRadioEnabledDuringGameplay(featurePlayerRadio)   -- Player Radio
 		SetUserRadioControlEnabled(true)    
@@ -188,6 +188,12 @@ AddEventHandler("mellotrainer:init", function()
 
 	-- Initialize Client Settings
 	syncSettings()
+
+	-- Create Mellotrainer Spawn Event Handler.
+
+	AddEventHandler("playerSpawned", function(spawn)
+		TriggerEvent("mellotrainer:playerSpawned")
+	end)
 end)
 
 
@@ -362,4 +368,52 @@ Citizen.CreateThread(function()
 		end
 
 	end
+end)
+
+
+-- *
+-- * Toggle Saving/Loading System
+-- *
+
+function setFeatureToggleStates(data)
+	for k,v in pairs(data) do
+		_G[k] = v
+	end
+end
+
+
+function getFeatureToggleStates()
+	local featureVariables = {}
+	for k,v in pairs(_G)do
+		if string.find(k,"feature") then
+			featureVariables[k] = v
+			if string.find(k,"Updated") then -- Force sync
+				featureVariables[k] = true
+			end
+		end
+	end
+	return featureVariables
+end
+
+
+RegisterNUICallback("savefeaturevariables", function()
+	local toggles = getFeatureToggleStates()
+	TriggerServerEvent( "wk:DataSave", "toggles", toggles, 0)
+	drawNotification("Current settings saved")
+end)
+
+RegisterNUICallback("resetfeaturevariables", function()
+	TriggerServerEvent( "wk:DataSave", "toggles", {}, 0)
+	drawNotification("Saved settings cleared  Reconnect to resync")
+end)
+
+RegisterNUICallback("loadfeaturevariables", function()
+	TriggerServerEvent( "wk:DataLoad", "toggles")
+end)
+
+RegisterNetEvent("wk:RecieveSavedToggles")
+AddEventHandler("wk:RecieveSavedToggles", function(data)
+	setFeatureToggleStates(data["0"])
+	syncSettings()
+	drawNotification("Settings loaded")
 end)

@@ -45,7 +45,17 @@
                 <p class="traineroption" data-sub="settingsmenu">Settings</p>
                 <p class="traineroption" data-sub="adminmenu" data-require="admin">Admin Menu</p>
                 <p class="traineroption" data-sub="aboutmenu">About</p>
+                <p class="traineroption" data-sub="savemenu">Save/Load Trainer Settings</p>
             </div>
+
+
+            <!-- Toggle Save Menu -->
+            <div id="savemenu" data-parent="mainmenu">
+                <p class="traineroption" data-action="savefeaturevariables">Save Current Settings</p>
+                <p class="traineroption" data-action="loadfeaturevariables">Load Saved Settings</p>
+                <p class="traineroption" data-action="resetfeaturevariables">Clear Saved Settings</p>
+            </div>
+
 
 
             <!--
@@ -80,7 +90,7 @@
 
 
                 <!-- Player Options Menu (Online) -->
-                <div id="onlineplayersmenuplayeroptions" data-parent="onlineplayersmenu">
+                <div id="onlineplayersmenu_playeroptions" data-parent="onlineplayersmenu">
                     <p class="traineroption" data-action="otherplayer teleportto">Teleport to Player</p>
                     <p class="traineroption" data-action="otherplayer teleportinside">Teleport into Player Vehicle</p>
                     <p class="traineroption" data-action="otherplayer drawroute">Draw Route to Player</p>
@@ -124,6 +134,7 @@
                 <p class="traineroption" data-action="player police" data-state="OFF" data-toggle="featurePlayerIgnoredByPolice">Police Ignore You</p>
                 <p class="traineroption" data-action="player wanted" data-state="OFF" data-toggle="featurePlayerNeverWanted">Never Wanted</p>
                 <p class="traineroption" data-action="player keepwet" data-state="OFF" data-toggle="featureKeepWet">Keep Wet</p>
+                <p class="traineroption" data-action="player restoreappearance" data-state="OFF" data-toggle="featureRestoreAppearance">Restore Player Appearance</p>
                 <p class="traineroption" data-action="player suicide">Suicide</p>
             </div>
             
@@ -783,15 +794,21 @@
             
             <!-- Weapons menu -->
             <div id="weaponsmenu" data-parent="mainmenu">
+                <!--<p class="traineroption" data-sub="weaponloadouts">Saved Loadouts</p> -->
                 <p class="traineroption" data-sub="weaponspawnmenu">Weapon Options</p>
                 <p class="traineroption" data-action="weaponoptions coploadout">Give Cop Loadout</p>
                 <p class="traineroption" data-action="weaponoptions emsloadout">Give INEM Loadout</p>
                 <p class="traineroption" data-action="weaponoptions suploadout" data-require="admin">Give Supervisor Loadout</p>
-                <p class="traineroption" data-action="weaponoptions addall">Add All Weapons</p>
+                <p class="traineroption" data-action="weaponoptions addall">Give All Weapons</p>
                 <p class="traineroption" data-action="weaponoptions removeall">Remove All Weapons</p>
                 <p class="traineroption" data-action="weaponoptions infiniteammo" data-state="OFF" data-toggle="featurePlayerInfiniteAmmo">Infinite Ammo</p>
                 <p class="traineroption" data-action="weaponoptions infinitechutes" data-state="OFF" data-toggle="featurePlayerInfiniteParachutes">Infinite Parachutes</p>
                 <p class="traineroption" data-action="weaponoptions noreload" data-state="OFF" data-toggle="featurePlayerNoReload">No Reload</p>
+            </div>
+
+
+            <!-- Saved Loadouts Menu -->
+            <div id="weaponloadouts" data-parent="weaponsmenu" data-dynamicmenu="loadsavedloadouts">
             </div>
 
 
@@ -803,6 +820,7 @@
                 <p class="traineroption" data-sub="weaponitemmenuassault">Assault Rifles</p>
                 <p class="traineroption" data-sub="weaponitemmenushotgun">Shotguns</p>
                 <p class="traineroption" data-sub="weaponitemmenusniper">Sniper Rifles</p>
+                <!--<p class="traineroption" data-sub="weaponitemmenuheavy">Heavy Weapons</p> -->
                 <p class="traineroption" data-sub="weaponitemmenuthrown">Thrown Weapons</p>
                 <p class="traineroption" data-action="weapon input">Spawn Weapon By Name</p>
             </div>
@@ -840,7 +858,7 @@
 
             <!-- Weapon Menu : heavy weapons 
             <div id="weaponitemmenuheavy" data-parent="weaponspawnmenu" data-staticmenu="weapon_heavy">
-            </div>-->|
+            </div>-->
 
 
             <!-- Weapon Menu : thrown weapons -->
@@ -889,7 +907,7 @@
             <!-- Settings Menu -->
            <div id="settingsmenu" data-parent="mainmenu">
                 <p class="traineroption" data-action="settingtoggle mapblips" data-state="OFF" data-toggle="featureMapBlips">Map Location Blips</p>
-                <p class="traineroption" data-action="settingtoggle blips" data-state="OFF" data-require="admin" data-toggle="featurePlayerBlips">Player Blips</p>
+                <p class="traineroption" data-action="settingtoggle blips" data-state="OFF" data-toggle="featurePlayerBlips" data-require="admin">Player Blips</p>
                 <p class="traineroption" data-action="settingtoggle blipnames" data-state="OFF" data-toggle="featurePlayerBlipNames">Player Blip Names</p>
                 <p class="traineroption" data-action="settingtoggle text" data-state="OFF" data-toggle="featurePlayerHeadDisplay">Overhead Player Names</p>
 
@@ -1017,9 +1035,13 @@
 
             <!-- About menu -->
             <div id="aboutmenu" data-parent="mainmenu">
-                <p class="traineroption">Mello Trainer v0.5.0</p>
-                <p class="traineroption">Criado por TheStonedTurtle</p>
-                <p class="traineroption">Adaptado por: Benny</p>
+                <p class="traineroption">Mello Trainer v0.5.5</p>
+                <p class="traineroption">Made By TheStonedTurtle</p>
+                <p class="traineroption">Special Thanks To:</p>
+                <p class="traineroption">WolfKnight</p>
+                <p class="traineroption">All My Beta Testers</p>
+                <p class="traineroption">Scammer's Scorpion Trainer</p>
+                <p class="traineroption">Oui's Lambda Menu</p>
             </div>
         </div>
     </body>

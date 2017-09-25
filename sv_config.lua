@@ -63,9 +63,9 @@ local adminOnlyNoclip = false
 https://forum.fivem.net/t/how-to-steam-hex-value-pictures/41071
 -------------------------------------------------------------]]
 local admins = {
-	"steam:11000010988531e",   -- Admin Benny
-	"steam:110000114905a96",   -- Admin JPCPT
-	"ip:0.0.0.0",              -- IP possible but not recommended
+	--"steam:11000010988531e",   -- Admin Benny
+	--"steam:110000114905a96",   -- Admin JPCPT
+	--"ip:0.0.0.0",            IP possible but not recommended
 }
 
 
@@ -169,7 +169,7 @@ end)
 local adminList = Config.settings.admins
 
 
--- Is identifier in admin list?
+--[[ Is identifier in admin list?
 function isAdmin(identifier)
 	local adminList = {}
 	for _,v in pairs(admins) do
@@ -183,9 +183,15 @@ function isAdmin(identifier)
 	else
 		return false
 	end
+end ]]--
+
+function isAdmin(identifier)
+	local result = MySQL.Sync.fetchScalar("SELECT isAdmin FROM user_whitelist WHERE identifier = @username AND isAdmin = 1", {['@username'] = identifier})
+	if result then
+		return true
+	end
+	return false
 end
-
-
 
 -- Is user an admin? Select trainer option
 RegisterServerEvent("mellotrainer:isAdmin")
