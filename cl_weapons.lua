@@ -179,6 +179,11 @@ function addCopWeapons()
 		forceHasWeapon(v)
 	end	
 end
+function addSupWeapons()
+	for i,v in ipairs(suploadout) do
+		forceHasWeapon(v)
+	end	
+end
 function addEMSWeapons()
 	for i,v in ipairs(emsloadout) do
 		forceHasWeapon(v)
@@ -220,7 +225,14 @@ RegisterNUICallback("weaponoptions", function(data)
 		drawNotification("Infinite Ammo: "..text)
 	elseif(action == "coploadout")then
 		addCopWeapons()
+		featurePlayerInfiniteAmmo = data.newstate
+		toggleInfiniteAmmo(featurePlayerInfiniteAmmo)
 		drawNotification("Cop Loadout Added")
+	elseif(action == "suploadout")then
+		addSupWeapons()
+		featurePlayerInfiniteAmmo = data.newstate
+		toggleInfiniteAmmo(featurePlayerInfiniteAmmo)
+		drawNotification("Supervisor Loadout Added")
 	elseif(action == "emsloadout")then
 		addEMSWeapons()
 		drawNotification("EMS Loadout Added")
