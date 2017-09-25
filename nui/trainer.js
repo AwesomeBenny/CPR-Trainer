@@ -154,7 +154,7 @@ $(function() {
         }
 
         // If they passed the security check access the menu and skip the check
-        if (item.vehicleaccess || item.adminaccess || item.customprivilegecheck){
+        if (item.vehicleaccess || item.adminaccess || item.copaccess || item.emsaccess || item.modaccess || item.icaccess ||item.customprivilegecheck){
             handleSelectedOption(true);
         }
 

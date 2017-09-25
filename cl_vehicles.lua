@@ -29,7 +29,7 @@ local function SpawnVehicle(model, x, y, z, heading, ped)
 		lastVehicle = GetVehiclePedIsIn(ped, false)
 	end
 
-	if IsModelValid(model) then
+	if (IsModelValid(model) and model~="FBI2") then
 		_LoadModel( model )
 
 		local veh = CreateVehicle( model, x, y, z + 1, heading, true, true )

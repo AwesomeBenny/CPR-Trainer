@@ -355,19 +355,74 @@ RegisterNUICallback("weather", function(data, cb)
 end)
 
 
-
 RegisterNetEvent("mellotrainer:adminstatus")
 AddEventHandler("mellotrainer:adminstatus", function(status)
 	if(status)then
 		SendNUIMessage({adminaccess = true})
 	else
 		drawNotification("~r~You are not an admin!")
-	end		
+	end
 end)
 
 -- Only show menu if they are an admin
 RegisterNUICallback("requireadmin", function(data, cb)
 	TriggerServerEvent("mellotrainer:isAdmin")
+end)
+
+-- Only show menu if they are a Cop
+RegisterNetEvent("mellotrainer:copstatus")
+AddEventHandler("mellotrainer:copstatus", function(status)
+	if(status)then
+		SendNUIMessage({copaccess = true})
+	else
+		drawNotification("~r~Não és Policia!")
+	end
+end)
+
+RegisterNUICallback("requirecop", function(data, cb)
+	TriggerServerEvent("mellotrainer:isCop")
+end)
+
+-- Only show menu if they are a EMS
+RegisterNetEvent("mellotrainer:emsstatus")
+AddEventHandler("mellotrainer:emsstatus", function(status)
+	if(status)then
+		SendNUIMessage({emsaccess = true})
+	else
+		drawNotification("~r~Não és INEM/Bombeiros!")
+	end
+end)
+
+RegisterNUICallback("requireems", function(data, cb)
+	TriggerServerEvent("mellotrainer:isEMS")
+end)
+
+-- Only show menu if they are a MOD
+RegisterNetEvent("mellotrainer:modstatus")
+AddEventHandler("mellotrainer:modstatus", function(status)
+	if(status)then
+		SendNUIMessage({modaccess = true})
+	else
+		drawNotification("~r~Não és Staff!")
+	end
+end)
+
+RegisterNUICallback("requiremoderator", function(data, cb)
+	TriggerServerEvent("mellotrainer:isModerador")
+end)
+
+-- Only show menu if they are a IC
+RegisterNetEvent("mellotrainer:icstatus")
+AddEventHandler("mellotrainer:icstatus", function(status)
+	if(status)then
+		SendNUIMessage({icaccess = true})
+	else
+		drawNotification("~r~Não és Investigacao Criminal!")
+	end
+end)
+
+RegisterNUICallback("requireic", function(data, cb)
+	TriggerServerEvent("mellotrainer:isIC")
 end)
 
 -- Wait until in game to trigger proper join

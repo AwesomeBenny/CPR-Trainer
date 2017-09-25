@@ -6540,121 +6540,140 @@
         "menuName": "VW Passat - VMER",
         "data": {
           "action": "AMBULANCEI",
-          "require": "admin"
+          "require": "ems"
         }
       },
       {
         "menuName": "Ambulancia - Mercedes Sprinter",
         "data": {
-          "action": "AMBULANCE"
+          "action": "AMBULANCE",
+          "require": "ems"
         }
       },
       {
         "menuName": "BMW GS1200 - INEM",
         "data": {
-          "action": "EMS_GS1200"
+          "action": "EMS_GS1200",
+          "require": "ems"
         }
       },
       {
         "menuName": "Firetruck",
         "data": {
-          "action": "FIRETRUK"
+          "action": "FIRETRUK",
+          "require": "ems"
         }
       },
       {
         "menuName": "Land Rover - RSB",
         "data": {
-          "action": "RSB_LRDEF"
+          "action": "RSB_LRDEF",
+          "require": "ems"
         }
       },
       {
         "menuName": "Skoda Octavia - Marked",
         "data": {
-          "action": "POLICE"
+          "action": "POLICE",
+          "require": "cop"
         }
       },
       {
         "menuName": "BMW 320d - Marked",
         "data": {
-          "action": "POLICE3"
+          "action": "POLICE3",
+          "require": "cop"
         }
       },
       {
         "menuName": "Land Rover Defender - Marked",
         "data": {
-          "action": "SHERIFF2"
+          "action": "SHERIFF2",
+          "require": "cop"
         }
       },
       {
         "menuName": "Ford Ranger - Marked",
         "data": {
-          "action": "PRANGER"
+          "action": "PRANGER",
+          "require": "cop"
         }
       },
       {
         "menuName": "Subaru WRX - BT Marked",
         "data": {
-          "action": "POLICE2"
+          "action": "POLICE2",
+          "require": "cop"
         }
       },
       {
         "menuName": "Subaru WRX - BT Unmarked",
         "data": {
-          "action": "GNR_SSTI"
+          "action": "GNR_SSTI",
+          "require": "cop"
         }
       },
       {
         "menuName": "VW Scirocco - BT Unmarked",
         "data": {
-          "action": "SHERIFFSCI"
+          "action": "SHERIFFSCI",
+          "require": "cop"
         }
       },
       {
         "menuName": "Audi R8 - BT Marked",
         "data": {
-          "action": "SHERIFF"
+          "action": "SHERIFF",
+          "require": "cop"
         }
       },
       {
         "menuName": "BMW Mota - Marked",
         "data": {
-          "action": "POLICEB"
+          "action": "POLICEB",
+          "require": "cop"
         }
       },
       {
         "menuName": "Ford Focus RS - Unmarked",
         "data": {
-          "action": "POLICE4"
+          "action": "POLICE4",
+          "require": "cop"
         }
       },
       {
         "menuName": "Lenco Bearcat - UEP",
         "data": {
-          "action": "RIOT"
+          "action": "RIOT",
+          "require": "cop"
         }
       },
       {
         "menuName": "Mercedes Sprinter - UEP",
         "data": {
-          "action": "POLICET"
+          "action": "POLICET",
+          "require": "cop"
         }
       },
       {
         "menuName": "Mercedes Sprinter - Celular",
         "data": {
-          "action": "PBUS"
+          "action": "PBUS",
+          "require": "cop"
         }
       },
       {
         "menuName": "Mercedes E63 - Unmarked",
         "data": {
-          "action": "FBI"
+          "action": "FBI",
+          "require": "cop"
         }
       },
       {
         "menuName": "BMW X5 - Unmarked",
         "data": {
-          "action": "FBI2"
+          "action": "FBI2",
+          "require": "ic"
         }
       },
       {

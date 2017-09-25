@@ -225,3 +225,113 @@ AddEventHandler("mellotrainer:getAdminStatus",function()
 	TriggerClientEvent("mellotrainer:adminStatusReceived",source,found)
 end)
 
+-- Cop Status
+function isCop(identifier)
+	local result = MySQL.Sync.fetchScalar("SELECT isCop FROM user_whitelist WHERE identifier = @username AND isCop = 1", {['@username'] = identifier})
+	local result1 = MySQL.Sync.fetchScalar("SELECT isSuperMod FROM user_whitelist WHERE identifier = @username AND isSuperMod = 1", {['@username'] = identifier})
+	local result2 = MySQL.Sync.fetchScalar("SELECT isAdmin FROM user_whitelist WHERE identifier = @username AND isAdmin = 1", {['@username'] = identifier})
+	if (result or result1 or result2) then
+		return true
+	end
+	return false
+end
+
+-- Is user a cop? Select trainer option
+RegisterServerEvent("mellotrainer:isCop")
+AddEventHandler("mellotrainer:isCop",function()
+	local identifiers = GetPlayerIdentifiers(source)
+	local found = false
+	for i=1,#identifiers,1 do
+		if(isCop(identifiers[i]))then
+			TriggerClientEvent("mellotrainer:copstatus",source,true)
+			found = true
+			break
+		end
+	end
+	if(not found)then
+		TriggerClientEvent("mellotrainer:copstatus",source,false)
+	end
+end)
+
+-- EMS Status
+function isEMS(identifier)
+	local result = MySQL.Sync.fetchScalar("SELECT isEMS FROM user_whitelist WHERE identifier = @username AND isEMS = 1", {['@username'] = identifier})
+	local result1 = MySQL.Sync.fetchScalar("SELECT isSuperMod FROM user_whitelist WHERE identifier = @username AND isSuperMod = 1", {['@username'] = identifier})
+	local result2 = MySQL.Sync.fetchScalar("SELECT isAdmin FROM user_whitelist WHERE identifier = @username AND isAdmin = 1", {['@username'] = identifier})
+	if (result or result1 or result2) then
+		return true
+	end
+	return false
+end
+
+-- Is user a cop? Select trainer option
+RegisterServerEvent("mellotrainer:isEMS")
+AddEventHandler("mellotrainer:isEMS",function()
+	local identifiers = GetPlayerIdentifiers(source)
+	local found = false
+	for i=1,#identifiers,1 do
+		if(isEMS(identifiers[i]))then
+			TriggerClientEvent("mellotrainer:emsstatus",source,true)
+			found = true
+			break
+		end
+	end
+	if(not found)then
+		TriggerClientEvent("mellotrainer:emsstatus",source,false)
+	end
+end)
+
+-- MOD Status
+function isModerador(identifier)
+	local result = MySQL.Sync.fetchScalar("SELECT isMod FROM user_whitelist WHERE identifier = @username AND isMod = 1", {['@username'] = identifier})
+	local result1 = MySQL.Sync.fetchScalar("SELECT isSuperMod FROM user_whitelist WHERE identifier = @username AND isSuperMod = 1", {['@username'] = identifier})
+	local result2 = MySQL.Sync.fetchScalar("SELECT isAdmin FROM user_whitelist WHERE identifier = @username AND isAdmin = 1", {['@username'] = identifier})
+	if (result or result1 or result2) then
+		return true
+	end
+	return false
+end
+
+-- Is user a Mod? Select trainer option
+RegisterServerEvent("mellotrainer:isModerador")
+AddEventHandler("mellotrainer:isModerador",function()
+	local identifiers = GetPlayerIdentifiers(source)
+	local found = false
+	for i=1,#identifiers,1 do
+		if(isModerador(identifiers[i]))then
+			TriggerClientEvent("mellotrainer:modstatus",source,true)
+			found = true
+			break
+		end
+	end
+	if(not found)then
+		TriggerClientEvent("mellotrainer:modstatus",source,false)
+	end
+end)
+
+-- IC Status
+function isIC(identifier)
+	local result = MySQL.Sync.fetchScalar("SELECT isIC FROM user_whitelist WHERE identifier = @username AND isIC = 1", {['@username'] = identifier})
+	local result2 = MySQL.Sync.fetchScalar("SELECT isAdmin FROM user_whitelist WHERE identifier = @username AND isAdmin = 1", {['@username'] = identifier})
+	if (result or result1 or result2) then
+		return true
+	end
+	return false
+end
+
+-- Is user a Mod? Select trainer option
+RegisterServerEvent("mellotrainer:isIC")
+AddEventHandler("mellotrainer:isIC",function()
+	local identifiers = GetPlayerIdentifiers(source)
+	local found = false
+	for i=1,#identifiers,1 do
+		if(isIC(identifiers[i]))then
+			TriggerClientEvent("mellotrainer:icstatus",source,true)
+			found = true
+			break
+		end
+	end
+	if(not found)then
+		TriggerClientEvent("mellotrainer:icstatus",source,false)
+	end
+end)
