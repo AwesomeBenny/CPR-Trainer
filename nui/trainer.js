@@ -385,8 +385,8 @@ function resetTrainer() {
     showMenu(menus["mainmenu"], true);
 
     // Reset trainer memory.
-    pageMemory = [];
-    optionMemory = [];
+    // pageMemory = [];
+    // optionMemory = [];
 }
 
 

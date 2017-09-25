@@ -246,7 +246,10 @@ RegisterNUICallback("weaponoptions", function(data)
 	end
 end)
 
-
+--Checking if the player is an admin
+RegisterNUICallback("requireadmin", function(data, cb)
+	TriggerServerEvent("mellotrainer:isAdmin")
+end)
 
 
 -- Infinite Parachutes, checks 4 times per second
