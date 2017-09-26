@@ -6535,42 +6535,39 @@
         }
       }
     ],
-    "Emergency": [
+    "Medics": [
       {
         "menuName": "VW Passat - VMER",
         "data": {
-          "action": "AMBULANCEI",
-          "require": "ems"
+          "action": "AMBULANCEI"
         }
       },
       {
         "menuName": "Ambulancia - Mercedes Sprinter",
         "data": {
-          "action": "AMBULANCE",
-          "require": "ems"
+          "action": "AMBULANCE"
         }
       },
       {
         "menuName": "BMW GS1200 - INEM",
         "data": {
-          "action": "EMS_GS1200",
-          "require": "ems"
+          "action": "EMS_GS1200"
         }
       },
       {
         "menuName": "Firetruck",
         "data": {
-          "action": "FIRETRUK",
-          "require": "ems"
+          "action": "FIRETRUK"
         }
       },
       {
         "menuName": "Land Rover - RSB",
         "data": {
-          "action": "RSB_LRDEF",
-          "require": "ems"
+          "action": "RSB_LRDEF"
         }
-      },
+      }
+    ],
+    "Cops": [
       {
         "menuName": "Skoda Octavia - Marked",
         "data": {
@@ -6581,92 +6578,79 @@
       {
         "menuName": "BMW 320d - Marked",
         "data": {
-          "action": "POLICE3",
-          "require": "cop"
+          "action": "POLICE3"
         }
       },
       {
         "menuName": "Land Rover Defender - Marked",
         "data": {
-          "action": "SHERIFF2",
-          "require": "cop"
+          "action": "SHERIFF2"
         }
       },
       {
         "menuName": "Ford Ranger - Marked",
         "data": {
-          "action": "PRANGER",
-          "require": "cop"
+          "action": "PRANGER"
         }
       },
       {
         "menuName": "Subaru WRX - BT Marked",
         "data": {
-          "action": "POLICE2",
-          "require": "cop"
+          "action": "POLICE2"
         }
       },
       {
         "menuName": "Subaru WRX - BT Unmarked",
         "data": {
-          "action": "GNR_SSTI",
-          "require": "cop"
+          "action": "GNR_SSTI"
         }
       },
       {
         "menuName": "VW Scirocco - BT Unmarked",
         "data": {
-          "action": "SHERIFFSCI",
-          "require": "cop"
+          "action": "SHERIFFSCI"
         }
       },
       {
         "menuName": "Audi R8 - BT Marked",
         "data": {
-          "action": "SHERIFF",
-          "require": "cop"
+          "action": "SHERIFF"
         }
       },
       {
         "menuName": "BMW Mota - Marked",
         "data": {
-          "action": "POLICEB",
-          "require": "cop"
+          "action": "POLICEB"
         }
       },
       {
         "menuName": "Ford Focus RS - Unmarked",
         "data": {
-          "action": "POLICE4",
-          "require": "cop"
+          "action": "POLICE4"
         }
       },
       {
         "menuName": "Lenco Bearcat - UEP",
         "data": {
-          "action": "RIOT",
-          "require": "cop"
+          "action": "RIOT"
         }
       },
       {
         "menuName": "Mercedes Sprinter - UEP",
         "data": {
-          "action": "POLICET",
-          "require": "cop"
+          "action": "POLICET"
         }
       },
       {
         "menuName": "Mercedes Sprinter - Celular",
         "data": {
-          "action": "PBUS",
-          "require": "cop"
+          "action": "PBUS"
         }
       },
       {
         "menuName": "Mercedes E63 - Unmarked",
         "data": {
-          "action": "FBI",
-          "require": "cop"
+          "action": "FBI"
         }
       },
       {
@@ -6675,7 +6659,9 @@
           "action": "FBI2",
           "require": "ic"
         }
-      },
+      }
+    ],
+    "Military": [
       {
         "menuName": "Army Barracks Truck",
         "data": {
@@ -9825,7 +9811,8 @@
       {
         "menuName": "CIASEC - IC 1",
         "data": {
-          "action": "s_m_m_ciasec_01"
+          "action": "s_m_m_ciasec_01",
+          "require": "cop"
         }
       },
       {
@@ -9915,7 +9902,8 @@
       {
         "menuName": "Cop Male",
         "data": {
-          "action": "s_m_y_cop_01"
+          "action": "s_m_y_cop_01",
+          "require": "cop"
         }
       },
       {
@@ -10335,7 +10323,8 @@
       {
         "menuName": "Fibsec - IC TACT",
         "data": {
-          "action": "mp_m_fibsec_01"
+          "action": "mp_m_fibsec_01",
+          "require": "cop"
         }
       },
       {

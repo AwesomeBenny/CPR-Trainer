@@ -199,8 +199,8 @@
                 <p class="traineroption" data-sub="vehiclesmodmenu" data-require="vehicle">Modifications</p>
                 <p class="traineroption" data-sub="vehiclespaintoptions">Paint Options</p>
                 <p class="traineroption" data-sub="vehiclesdamagesettings">Damage Settings</p>
-                <p class="traineroption" data-sub="vehiclespowersettings">Power Boost Options</p>
-                <p class="traineroption" data-sub="vehiclestorquesettings">Torque Boost Options</p>
+                <p class="traineroption" data-sub="vehiclespowersettings" data-require="admin">Power Boost Options</p>
+                <p class="traineroption" data-sub="vehiclestorquesettings" data-require="admin">Torque Boost Options</p>
                 <p class="traineroption" data-sub="vehiclessuspensionoptions">Suspension Options</p>
 
 
@@ -299,15 +299,17 @@
 
             <!-- Vehicle Spawner. Chooose type of vehicle to spawn. -->
             <div id="vehiclesspawnmenu" data-parent="vehiclesmenu">
-                <p class="traineroption" data-sub="vehiclestypemenucars">Cars</p>
+                <p class="traineroption" data-sub="vehiclestypemenucars">Carros</p>
                 <p class="traineroption" data-sub="vehiclestypemenuindustrial">Industrial</p>
-                <p class="traineroption" data-sub="vehiclestypemenuemergency">Emergency and Military</p>
+                <p class="traineroption" data-sub="vehiclestypemenucops" data-require="cop">Policia</p>
+                <p class="traineroption" data-sub="vehiclestypemenumedics" data-require="ems">INEM/BOMBEIROS</p>
+                <p class="traineroption" data-sub="vehiclestypemenumilitary">Military</p>
                 <p class="traineroption" data-sub="vehiclestypemenumotorcycles">Motorcycles</p>
                 <p class="traineroption" data-sub="vehiclestypemenuplanes">Planes</p>
                 <p class="traineroption" data-sub="vehiclestypemenuhelicopters">Helicopters</p>
                 <p class="traineroption" data-sub="vehiclestypemenuboats">Boats</p>
                 <p class="traineroption" data-sub="vehiclestypemenubicycles">Bicycles</p>
-                <p class="traineroption" data-action="vehspawn input">Spawn Vehicle By Name</p>
+                <p class="traineroption" data-action="vehspawn input" data-require="moderator">Spawn Vehicle By Name</p>
             </div>
 
 
@@ -428,9 +430,14 @@
                 <div id="vehiclestypemenuindustrialtrains" data-parent="vehiclestypemenuindustrial" data-staticmenu="vehicle_industrial_trains">
                 </div>
 
-
-            <!-- Vehicle Spawner: Emergency -->
-            <div id="vehiclestypemenuemergency" data-parent="vehiclesspawnmenu" data-staticmenu="vehicle_emergency">
+            <!-- Vehicle Spawner: Cops -->
+            <div id="vehiclestypemenucops" data-parent="vehiclesspawnmenu" data-staticmenu="vehicle_cops">
+            </div>
+            <!-- Vehicle Spawner: Medics -->
+            <div id="vehiclestypemenumedics" data-parent="vehiclesspawnmenu" data-staticmenu="vehicle_medics">
+            </div>
+            <!-- Vehicle Spawner: Military -->
+            <div id="vehiclestypemenumilitary" data-parent="vehiclesspawnmenu" data-staticmenu="vehicle_military">
             </div>
 
 
@@ -907,7 +914,7 @@
             <!-- Settings Menu -->
            <div id="settingsmenu" data-parent="mainmenu">
                 <p class="traineroption" data-action="settingtoggle mapblips" data-state="OFF" data-toggle="featureMapBlips">Map Location Blips</p>
-                <p class="traineroption" data-action="settingtoggle blips" data-state="OFF" data-toggle="featurePlayerBlips" data-require="admin">Player Blips</p>
+                <p class="traineroption" data-action="settingtoggle blips" data-state="OFF" data-toggle="featurePlayerBlips" data-require="mod">Player Blips</p>
                 <p class="traineroption" data-action="settingtoggle blipnames" data-state="OFF" data-toggle="featurePlayerBlipNames">Player Blip Names</p>
                 <p class="traineroption" data-action="settingtoggle text" data-state="OFF" data-toggle="featurePlayerHeadDisplay">Overhead Player Names</p>
 
