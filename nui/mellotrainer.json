@@ -6561,6 +6561,12 @@
         }
       },
       {
+        "menuName": "Land Rover - VCOT",
+        "data": {
+          "action": "POLICEOLD2"
+        }
+      },
+      {
         "menuName": "Land Rover - RSB",
         "data": {
           "action": "RSB_LRDEF"
@@ -6624,9 +6630,21 @@
         }
       },
       {
+        "menuName": "Volkswagen Passat - Unmarked",
+        "data": {
+          "action": "BIC"
+        }
+      },
+      {
         "menuName": "Ford Focus RS - Unmarked",
         "data": {
           "action": "POLICE4"
+        }
+      },
+      {
+        "menuName": "Skoda Octavia - Unmarked",
+        "data": {
+          "action": "UNMSKODA"
         }
       },
       {
@@ -8035,6 +8053,12 @@
         }
       },
       {
+        "menuName": "Tesla Model S P90D",
+        "data": {
+          "action": "models"
+        }
+      },
+      {
         "menuName": "Ubermacht Oracle",
         "data": {
           "action": "ORACLE"
@@ -8078,6 +8102,12 @@
       }
     ],
     "Coupes": [
+      {
+        "menuName": "Volkswagen Golf",
+        "data": {
+          "action": "BLISTAC"
+        }
+      },
       {
         "menuName": "Dewbauchee Exemplar",
         "data": {
