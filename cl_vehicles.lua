@@ -293,7 +293,7 @@ RegisterNUICallback( "vehiclesave", function( data, cb )
 						end 
 					end 
 
-					vehicleTableData[ "neonColour" ] = { neonR, neonG, neonB }
+					vehicleTableData[ "neonColour" ] = { neonR, neonG, neonB }  
 					vehicleTableData[ "smokeColour" ] = { smokeR, smokeG, smokeB }
 					vehicleTableData[ "neonToggles" ] = neonToggles
 
@@ -1307,7 +1307,7 @@ Citizen.CreateThread(function()
 
 				-- KM/H = carSpeed * 3.6
 				-- MPH = carSpeed * 2.236936
-				local speed = carSpeed * 2.236936
+				local speed = carSpeed * 3.6
 
 				SendNUIMessage({
 					showspeed = true,

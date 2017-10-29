@@ -6575,6 +6575,12 @@
     ],
     "Cops": [
       {
+        "menuName": "Opel Astra - Reserva",
+        "data": {
+          "action": "DILETTANTE2"
+        }
+      },
+      {
         "menuName": "Skoda Octavia - Marked",
         "data": {
           "action": "POLICE",
@@ -7922,12 +7928,6 @@
         "menuName": "Karin Dilettante",
         "data": {
           "action": "DILETTANTE"
-        }
-      },
-      {
-        "menuName": "Karin Dilettante (FlyUS)",
-        "data": {
-          "action": "DILETTANTE2"
         }
       },
       {
