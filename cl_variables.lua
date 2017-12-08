@@ -93,7 +93,8 @@ featureRadioAlwaysOff = false;
 -- TODO: The following variables are better to sync server-sided.
 featureBlackout = false;
 featureWeatherWind = false;
-featureWeatherFreeze = false;
+featureWeatherFreeze = true;
+featureNatal = true;
 
 -- Voice
 featureShowVoiceChatSpeaker = true;
