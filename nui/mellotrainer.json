@@ -6561,9 +6561,15 @@
         }
       },
       {
-        "menuName": "Firetruck",
+        "menuName": "Firetruck - VUCI",
         "data": {
           "action": "FIRETRUK"
+        }
+      },
+      {
+        "menuName": "Firetruck - VSAT",
+        "data": {
+          "action": "FIRETRUK2"
         }
       },
       {
@@ -6587,7 +6593,7 @@
         }
       },
       {
-        "menuName": "Volkswagen Passat - Marked",
+        "menuName": "Audi A4 - Marked BT/PP",
         "data": {
           "action": "BIC"
         }
@@ -6600,15 +6606,15 @@
         }
       },
       {
-        "menuName": "BMW 320d - Marked",
+        "menuName": "BMW M5 F90 - Marked",
         "data": {
           "action": "POLICE3"
         }
       },
       {
-        "menuName": "Land Rover Defender - Marked",
+        "menuName": "Ford Explorer - Marked",
         "data": {
-          "action": "SHERIFF2"
+          "action": "FPIEXPLORER"
         }
       },
       {
@@ -6618,21 +6624,22 @@
         }
       },
       {
-        "menuName": "Subaru WRX - BT Marked",
+        "menuName": "Jaguar XFR-S - Marked",
         "data": {
           "action": "POLICE2"
         }
       },
       {
-        "menuName": "Subaru WRX - BT Unmarked",
+        "menuName": "JAguar XFR-S - Unmarked",
         "data": {
           "action": "GNR_SSTI"
         }
       },
       {
-        "menuName": "VW Scirocco - BT Unmarked",
+        "menuName": "BMW M5 F90 - Unmarked",
         "data": {
-          "action": "SHERIFFSCI"
+          "action": "SHERIFFSCI",
+	     "require": "ic"
         }
       },
       {
@@ -6645,12 +6652,6 @@
         "menuName": "BMW Mota - Marked",
         "data": {
           "action": "POLICEB"
-        }
-      },
-      {
-        "menuName": "Ford Focus RS - Unmarked",
-        "data": {
-          "action": "POLICE4"
         }
       },
       {
@@ -6678,9 +6679,15 @@
         }
       },
       {
-        "menuName": "Mercedes E63 - Unmarked",
+        "menuName": "Audi A4 - Unmarked",
         "data": {
           "action": "FBI"
+        }
+      },
+      {
+        "menuName": "Mercedes C250d - Unmarked",
+        "data": {
+          "action": "MERCPOL"
         }
       },
       {
@@ -6924,6 +6931,12 @@
         "menuName": "Airtug",
         "data": {
           "action": "AIRTUG"
+        }
+      },
+      {
+        "menuName": "Brisa Mercedes-Benz",
+        "data": {
+          "action": "BRISA_MVITO"
         }
       },
       {
@@ -7779,7 +7792,7 @@
         }
       },
       {
-        "menuName": "Albany Cavalcade Mk2",
+        "menuName": "Audi Q7",
         "data": {
           "action": "CAVALCADE2"
         }
@@ -7803,7 +7816,7 @@
         }
       },
       {
-        "menuName": "Bravado Gresley",
+        "menuName": "Jeep Grand Cherokee",
         "data": {
           "action": "GRESLEY"
         }
@@ -7821,7 +7834,7 @@
         }
       },
       {
-        "menuName": "Canis Seminole",
+        "menuName": "Nissan Frontier",
         "data": {
           "action": "SEMINOLE"
         }
@@ -7981,7 +7994,7 @@
         }
       },
       {
-        "menuName": "Benefactor Schafter",
+        "menuName": "Mercedes-Benz E63",
         "data": {
           "action": "SCHAFTER2"
         }
@@ -8017,7 +8030,7 @@
         }
       },
       {
-        "menuName": "Declasse Premier",
+        "menuName": "Volkswagen Aerton",
         "data": {
           "action": "PREMIER"
         }
@@ -8065,7 +8078,7 @@
         }
       },
       {
-        "menuName": "Ubermacht Oracle",
+        "menuName": "BMW 325GT",
         "data": {
           "action": "ORACLE"
         }
@@ -8115,7 +8128,7 @@
         }
       },
       {
-        "menuName": "Dewbauchee Exemplar",
+        "menuName": "Porsche Panamera",
         "data": {
           "action": "EXEMPLAR"
         }
@@ -8151,7 +8164,7 @@
         }
       },
       {
-        "menuName": "Ocelot F620",
+        "menuName": "Maseratti",
         "data": {
           "action": "F620"
         }
@@ -8350,6 +8363,12 @@
         "menuName": "Declasse Weaponized Tampa",
         "data": {
           "action": "TAMPA3"
+        }
+      },
+      {
+        "menuName": "Dodge Challenger Hellcat",
+        "data": {
+          "action": "DCH"
         }
       },
       {
@@ -8645,7 +8664,7 @@
         }
       },
       {
-        "menuName": "Bravado Buffalo S",
+        "menuName": "Dodge Charger Hellcat",
         "data": {
           "action": "BUFFALO2"
         }
@@ -11758,13 +11777,15 @@
       {
         "menuName": "Paramedic - INEM",
         "data": {
-          "action": "s_m_m_paramedic_01"
+          "action": "s_m_m_paramedic_01",
+          "require": "ems"
         }
       },
       {
         "menuName": "Paramedic 2 - INEM",
         "data": {
-          "action": "s_m_m_ups_02"
+          "action": "s_m_m_ups_02",
+          "require": "ems"
         }
       },
       {

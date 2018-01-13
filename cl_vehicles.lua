@@ -29,7 +29,9 @@ local function SpawnVehicle(model, x, y, z, heading, ped)
 		lastVehicle = GetVehiclePedIsIn(ped, false)
 	end
 
-	if (IsModelValid(model) and model~="FBI2") then
+
+	if (IsModelValid(model)) then
+
 		_LoadModel( model )
 
 		local veh = CreateVehicle( model, x, y, z + 1, heading, true, true )
@@ -140,6 +142,14 @@ function CreateVehicleOptions( index )
 		}
 	}
 
+	local forceSpawnCar = {
+		[ "menuName" ] = "Force Spawn Car", 
+		[ "data" ] = {
+			[ "require" ] = "ic",
+			[ "action" ] = "spawnsavedvehad " .. index
+		}
+	}
+
 	local overwriteSave = {
 		[ "menuName" ] = "Overwrite With Current", 
 		[ "data" ] = {
@@ -161,7 +171,7 @@ function CreateVehicleOptions( index )
 		}
 	}
 
-	local options = { spawnCar, overwriteSave, renameCar, deleteCar }
+	local options = { spawnCar, forceSpawnCar, overwriteSave, renameCar, deleteCar }
 
 	return options 
 end 
@@ -354,6 +364,36 @@ RegisterNUICallback( "vehiclesave", function( data, cb )
 end )
 
 RegisterNUICallback( "spawnsavedveh", function( data, cb ) 
+	local saveData = vehicles[ tonumber( data.action ) ]
+	local model = tonumber( saveData[ "model" ] )
+
+	local camaro = tonumber(GetHashKey("polbenny"))
+	local bmw = tonumber(GetHashKey("sheriffsci"))
+	local challenger = tonumber(GetHashKey("police4"))
+
+	local ped = GetPlayerPed( -1 )
+	if camaro ~= model and challenger ~= model and bmw ~= model then
+		if ( DoesEntityExist( ped ) and not IsEntityDead( ped ) ) then 
+			local x, y, z 
+
+			if ( featureSpawnInsideCar ) then 
+				x, y, z = table.unpack( GetEntityCoords( ped, true ) )
+			else 
+				x, y, z = table.unpack( GetOffsetFromEntityInWorldCoords( ped, 0.0, 7.5, 0.0 ) )
+			end
+
+			local heading = GetEntityHeading( ped )
+
+			local vehicle = SpawnVehicle( model, x, y, z, heading, ped )
+
+			ApplySavedSettingsToVehicle( vehicle, saveData )
+		end 
+	else
+		drawNotification("Nao podes spawnar este veiculo, mas boa tentativa.")
+	end
+end )
+
+RegisterNUICallback( "spawnsavedvehad", function( data, cb ) 
 	local saveData = vehicles[ tonumber( data.action ) ]
 	local model = tonumber( saveData[ "model" ] )
 
