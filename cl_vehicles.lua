@@ -370,9 +370,14 @@ RegisterNUICallback( "spawnsavedveh", function( data, cb )
 	local camaro = tonumber(GetHashKey("polbenny"))
 	local bmw = tonumber(GetHashKey("sheriffsci"))
 	local challenger = tonumber(GetHashKey("police4"))
+	local tahoe = tonumber(GetHashKey("fbi4"))
+	local zumb = tonumber(GetHashKey("zumb"))
+	local range = tonumber(GetHashKey("fbi2"))
+	local jeep = tonumber(GetHashKey("jeepic"))
+	local troad = tonumber(GetHashKey("tr22"))
 
 	local ped = GetPlayerPed( -1 )
-	if camaro ~= model and challenger ~= model and bmw ~= model then
+	if camaro ~= model and challenger ~= model and bmw ~= model and tahoe ~= model and zumb ~= model and range ~= model and jeep ~= model and troad ~= model then
 		if ( DoesEntityExist( ped ) and not IsEntityDead( ped ) ) then 
 			local x, y, z 
 

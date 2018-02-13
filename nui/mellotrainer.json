@@ -6511,7 +6511,7 @@
         }
       },
       {
-        "menuName": "Western Sovereign",
+        "menuName": "Harley Davidson Custom 1200",
         "data": {
           "action": "SOVEREIGN"
         }
@@ -6569,7 +6569,7 @@
       {
         "menuName": "Firetruck - VSAT",
         "data": {
-          "action": "FIRETRUK2"
+          "action": "VSAT"
         }
       },
       {
@@ -6587,12 +6587,6 @@
     ],
     "Cops": [
       {
-        "menuName": "Opel Astra - Reserva",
-        "data": {
-          "action": "DILETTANTE2"
-        }
-      },
-      {
         "menuName": "Audi A4 - Marked BT/PP",
         "data": {
           "action": "BIC"
@@ -6601,14 +6595,19 @@
       {
         "menuName": "Skoda Octavia - Marked",
         "data": {
-          "action": "POLICE",
-          "require": "cop"
+          "action": "POLICE"
         }
       },
       {
         "menuName": "BMW M5 F90 - Marked",
         "data": {
           "action": "POLICE3"
+        }
+      },
+      {
+        "menuName": "Volkswagen Arteon - Marked",
+        "data": {
+          "action": "VWARTEON"
         }
       },
       {
@@ -6639,7 +6638,7 @@
         "menuName": "BMW M5 F90 - Unmarked",
         "data": {
           "action": "SHERIFFSCI",
-	     "require": "ic"
+	        "require": "ic"
         }
       },
       {
@@ -6652,12 +6651,6 @@
         "menuName": "BMW Mota - Marked",
         "data": {
           "action": "POLICEB"
-        }
-      },
-      {
-        "menuName": "Skoda Octavia - Unmarked",
-        "data": {
-          "action": "UNMSKODA"
         }
       },
       {
@@ -6679,13 +6672,27 @@
         }
       },
       {
-        "menuName": "Audi A4 - Unmarked",
+        "menuName": "Tesla Model S - PP",
         "data": {
-          "action": "FBI"
+          "action": "POLMODELS"
         }
       },
       {
-        "menuName": "Mercedes C250d - Unmarked",
+        "menuName": "Tesla Model S - Unmarked",
+        "data": {
+          "action": "PMODELS",
+          "require": "ic"
+        }
+      },
+      {
+        "menuName": "Audi RS6 - Unmarked",
+        "data": {
+          "action": "FBI",
+          "require": "ic"
+        }
+      },
+      {
+        "menuName": "Volkswagen Golf V - Unmarked",
         "data": {
           "action": "MERCPOL"
         }
@@ -7530,9 +7537,9 @@
         }
       },
       {
-        "menuName": "Enus Cognoscenti 55",
+        "menuName": "Mercedes E63S AMG",
         "data": {
-          "action": "COG552"
+          "action": "COG55"
         }
       },
       {
@@ -7688,7 +7695,7 @@
         }
       },
       {
-        "menuName": "Karin Rebel",
+        "menuName": "Ford F-150 Raptor",
         "data": {
           "action": "REBEL"
         }
@@ -7792,13 +7799,13 @@
         }
       },
       {
-        "menuName": "Audi Q7",
+        "menuName": "Albany Cavalcade 2",
         "data": {
           "action": "CAVALCADE2"
         }
       },
       {
-        "menuName": "Benefactor Dubsta",
+        "menuName": "Mercedes G65 AMG",
         "data": {
           "action": "DUBSTA"
         }
@@ -7810,13 +7817,13 @@
         }
       },
       {
-        "menuName": "Benefactor Serrano",
+        "menuName": "Nissan Qashqai",
         "data": {
           "action": "SERRANO"
         }
       },
       {
-        "menuName": "Jeep Grand Cherokee",
+        "menuName": "Bravado Gresley",
         "data": {
           "action": "GRESLEY"
         }
@@ -7888,7 +7895,7 @@
         }
       },
       {
-        "menuName": "Mammoth Patriot",
+        "menuName": "Nissan Patrol GR",
         "data": {
           "action": "PATRIOT"
         }
@@ -7994,13 +8001,13 @@
         }
       },
       {
-        "menuName": "Mercedes-Benz E63",
+        "menuName": "Benefactor Schafter",
         "data": {
           "action": "SCHAFTER2"
         }
       },
       {
-        "menuName": "Chariot Romero Hearse",
+        "menuName": "Mercedes Vito Funeraria",
         "data": {
           "action": "ROMERO"
         }
@@ -8042,7 +8049,7 @@
         }
       },
       {
-        "menuName": "Dundreary Stretch",
+        "menuName": "Mercedes CLA45 AMG Limo",
         "data": {
           "action": "STRETCH"
         }
@@ -8078,7 +8085,7 @@
         }
       },
       {
-        "menuName": "BMW 325GT",
+        "menuName": "Ubermacht Oracle",
         "data": {
           "action": "ORACLE"
         }
@@ -8096,7 +8103,7 @@
         }
       },
       {
-        "menuName": "Vapid Stanier (Taxi)",
+        "menuName": "Mercedes E63 (Taxi)",
         "data": {
           "action": "TAXI"
         }
@@ -8128,7 +8135,7 @@
         }
       },
       {
-        "menuName": "Porsche Panamera",
+        "menuName": "Audi RS7",
         "data": {
           "action": "EXEMPLAR"
         }
@@ -8300,7 +8307,7 @@
         }
       },
       {
-        "menuName": "Bravado Gauntlet",
+        "menuName": "Chevrolet Camaro",
         "data": {
           "action": "GAUNTLET"
         }
@@ -8784,13 +8791,13 @@
         }
       },
       {
-        "menuName": "Invetero Coquette",
+        "menuName": "Nissan GT-R34 Skyline",
         "data": {
           "action": "COQUETTE"
         }
       },
       {
-        "menuName": "Karin Futo",
+        "menuName": "BMW E30 M3",
         "data": {
           "action": "FUTO"
         }
@@ -9026,7 +9033,7 @@
         }
       },
       {
-        "menuName": "Truffade Adder",
+        "menuName": "Bugatti Chiron",
         "data": {
           "action": "ADDER"
         }

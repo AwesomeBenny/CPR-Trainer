@@ -9,6 +9,7 @@ files {
 	"nui/trainer.html",
 	"nui/trainer.js",
 	"nui/trainer.css",
+	"nui/pt_flag.jpg",
 	"nui/Roboto.ttf",
 	"nui/Lemonada.ttf",
 	"nui/Roboto-Black.ttf"

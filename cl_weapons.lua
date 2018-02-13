@@ -255,6 +255,7 @@ function toggleWeaponEquipped(weaponName)
         end
         GiveWeaponToPed(playerPed, weapon, 0, true, true)
         drawNotification("Weapon Added")
+        toggleWeaponComponent(weapon, COMPONENT_AT_PI_FLSH)
         if(featurePlayerInfiniteAmmo)then
             toggleInfiniteAmmo(featurePlayerInfiniteAmmo)
         end
